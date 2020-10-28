@@ -52,7 +52,9 @@ public class lab8 { //основной класс
 		book1.predictable_profit(res);
 		c=res.value;
 		System.out.printf("\nPredictable profit (using class arg): %d", c);  //возврат значения через дополнительный класс
-		System.out.printf("\n\nLength of the 'genre': %d\n", book1.genre_len());  //подсчет длины строки 'жанр'
+		System.out.printf("\n\nLength of the 'genre' (static method): %d\n", book1.genre_len(book1));  //подсчет длины строки 'жанр'
+		book1.space_left = 50;
+		System.out.printf("\nSpace left in the store (static field): %d\n", book1.space_left);
 		book1.title_author_compare(); //сравнение автора и названия
 	}
 }
