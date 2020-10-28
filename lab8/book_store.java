@@ -7,7 +7,7 @@ public class book_store {
 	int price=0; //цена
 	int num_stock=0; //количество в магазине
 	int popularity=0; //популярность
-	static int space_left;
+	static int space_left; //статическое поле отавшееся в магазине место
 	public book_store(special spec_offer[]){ //конструктор с параметром
 		n = 0;
 		for (int i=0; i<n; i++)
@@ -105,7 +105,7 @@ public class book_store {
 	void predictable_profit(result a) { //подсчет ожидаемой прибыли через дополнительный класс
 		a.value=num_stock*price;
 	}
-	static int genre_len(book_store book) { //подсчет длины строки 'жанр'
+	static int genre_len(book_store book) { //статический метод подсчета длины строки 'жанр'
 		return book.genre.length();
 	}
 	void title_author_compare() { //сравнение автора и названия
