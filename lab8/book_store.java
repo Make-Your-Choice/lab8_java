@@ -105,8 +105,11 @@ public class book_store {
 	void predictable_profit(result a) { //подсчет ожидаемой прибыли через дополнительный класс
 		a.value=num_stock*price;
 	}
-	static int genre_len(book_store book) { //статический метод подсчета длины строки 'жанр'
-		return book.genre.length();
+	int genre_len() { //подсчет длины строки 'жанр'
+		return genre.length();
+	}
+	static int reduce_space_left() { //статический метод
+		return space_left - 1;
 	}
 	void title_author_compare() { //сравнение автора и названия
 		if(title.equalsIgnoreCase(author))
